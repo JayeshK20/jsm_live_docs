@@ -1,14 +1,26 @@
 import CollaborativeRoom from '@/components/CollaborativeRoom';
-import Header from '@/components/Header';
-import { Editor } from '@/components/editor/Editor';
-import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import React from 'react';
+import { getDocument } from '@/lib/actions/room.actions';
+import { currentUser } from '@clerk/nextjs/server';
+import { redirect } from 'next/navigation';
 
-const Document = () => {
+const Document = async ({ params: { id } }: SearchParamProps) => {
+  const clerkUser = await currentUser();
+  if(!clerkUser) redirect('/sign-in');
+
+  const room = await getDocument({
+    roomId: id,
+    userId: clerkUser.emailAddresses[0].emailAddress,
+  });
+
+  if(!room) redirect('/'); 
+
+  // TODO: Assess the permssions of the user to access the document
+
   return (
     <main className="flex w-full flex-col items-center">
       <CollaborativeRoom 
-      
+        roomId={id}
+        roomMetadata={room.metadata}
       />
     </main>
   );
