@@ -1,6 +1,5 @@
-import { useOthers } from '@liveblocks/react/suspense';
+import { useOthers } from '@liveblocks/react/suspense'
 import Image from 'next/image';
-import React from 'react';
 
 const ActiveCollaborators = () => {
   const others = useOthers();
@@ -22,7 +21,7 @@ const ActiveCollaborators = () => {
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default ActiveCollaborators;
+export default ActiveCollaborators
