@@ -13,9 +13,6 @@
 
   <h3 align="center">A Collaborative LiveDocs</h3>
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -30,19 +27,9 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/y5vE8y_f_OM" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
 ## <a name="introduction">🤖 Introduction</a>
 
 Built with Next.js to handle the user interface, Liveblocks for real-time features and styled with TailwindCSS, LiveDocs is a clone of Goole Docs. The primary goal is to demonstrate the developer's skills in realtime enviroment that creates a lasting impact.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+** members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -60,10 +47,11 @@ If you're getting started and need assistance or face any bugs, join our active 
 👉 **Collaborative Text Editor**: Multiple users can edit the same document simultaneously with real-time updates.
 
 👉 **Documents Management**
-   - **Create Documents**: Users can create new documents, which are automatically saved and listed.
-   - **Delete Documents**: Users can delete documents they own.
-   - **Share Documents**: Users can share documents via email or link with view/edit permissions.
-   - **List Documents**: Display all documents owned or shared with the user, with search and sorting functionalities.
+
+- **Create Documents**: Users can create new documents, which are automatically saved and listed.
+- **Delete Documents**: Users can delete documents they own.
+- **Share Documents**: Users can share documents via email or link with view/edit permissions.
+- **List Documents**: Display all documents owned or shared with the user, with search and sorting functionalities.
 
 👉 **Comments**: Users can add inline and general comments, with threading for discussions.
 
@@ -73,58 +61,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Responsive**: The application is responsive across all devices.
 
-and many more, including code architecture and reusability 
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/collaborative-editor.git
-cd collaborative-editor
-```
-
-**Installation**
-
-Install the project dependencies using npm:
-
-```bash
-npm install
-```
-
-**Set Up Environment Variables**
-
-Create a new file named `.env` in the root of your project and add the following content:
-
-```env
-#Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-
-#Liveblocks
-NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=
-LIVEBLOCKS_SECRET_KEY=
-```
-
-Replace the placeholder values with your actual Clerk & LiveBlocks credentials. You can obtain these credentials by signing up on the [Clerk](https://clerk.com/) and [Liveblocks](liveblocks.io/) website.
-
-**Running the Project**
-
-```bash
-npm run dev
-```
+and many more, including code architecture and reusability
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
@@ -449,72 +386,72 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 <summary><code>tailwind.config.ts</code></summary>
 
 ```typescript
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
-  prefix: '',
+  prefix: "",
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "2rem",
       screens: {
-        '2xl': '1400px',
-        xs: '360px',
+        "2xl": "1400px",
+        xs: "360px",
       },
     },
     extend: {
       colors: {
         blue: {
-          100: '#B4C6EE',
-          400: '#417BFF',
-          500: '#3371FF',
+          100: "#B4C6EE",
+          400: "#417BFF",
+          500: "#3371FF",
         },
         red: {
-          400: '#DD4F56',
-          500: '#DC4349',
+          400: "#DD4F56",
+          500: "#DC4349",
         },
         dark: {
-          100: '#09111F',
-          200: '#0B1527',
-          300: '#0F1C34',
-          350: '#12213B',
-          400: '#27344D',
-          500: '#2E3D5B',
+          100: "#09111F",
+          200: "#0B1527",
+          300: "#0F1C34",
+          350: "#12213B",
+          400: "#27344D",
+          500: "#2E3D5B",
         },
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       backgroundImage: {
-        doc: 'url(/assets/images/doc.png)',
-        modal: 'url(/assets/images/modal.png)',
+        doc: "url(/assets/images/doc.png)",
+        modal: "url(/assets/images/modal.png)",
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;
@@ -614,8 +551,8 @@ declare type ThreadWrapperProps = { thread: ThreadData<BaseMetadata> };
 <summary><code>lib/utils.ts</code></summary>
 
 ```typescript
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -625,14 +562,14 @@ export const parseStringify = (value: any) => JSON.parse(JSON.stringify(value));
 
 export const getAccessType = (userType: UserType) => {
   switch (userType) {
-    case 'creator':
-      return ['room:write'];
-    case 'editor':
-      return ['room:write'];
-    case 'viewer':
-      return ['room:read', 'room:presence:write'];
+    case "creator":
+      return ["room:write"];
+    case "editor":
+      return ["room:write"];
+    case "viewer":
+      return ["room:read", "room:presence:write"];
     default:
-      return ['room:read', 'room:presence:write'];
+      return ["room:read", "room:presence:write"];
   }
 };
 
@@ -657,13 +594,13 @@ export const dateConverter = (timestamp: string): string => {
     case diffInMinutes >= 1:
       return `${Math.floor(diffInMinutes)} minutes ago`;
     default:
-      return 'Just now';
+      return "Just now";
   }
 };
 
 // Function to generate a random color in hex format, excluding specified colors
 export function getRandomColor() {
-  const avoidColors = ['#000000', '#FFFFFF', '#8B4513']; // Black, White, Brown in hex format
+  const avoidColors = ["#000000", "#FFFFFF", "#8B4513"]; // Black, White, Brown in hex format
 
   let randomColor;
   do {
@@ -680,25 +617,25 @@ export function getRandomColor() {
 }
 
 export const brightColors = [
-  '#2E8B57', // Darker Neon Green
-  '#FF6EB4', // Darker Neon Pink
-  '#00CDCD', // Darker Cyan
-  '#FF00FF', // Darker Neon Magenta
-  '#FF007F', // Darker Bright Pink
-  '#FFD700', // Darker Neon Yellow
-  '#00CED1', // Darker Neon Mint Green
-  '#FF1493', // Darker Neon Red
-  '#00CED1', // Darker Bright Aqua
-  '#FF7F50', // Darker Neon Coral
-  '#9ACD32', // Darker Neon Lime
-  '#FFA500', // Darker Neon Orange
-  '#32CD32', // Darker Neon Chartreuse
-  '#ADFF2F', // Darker Neon Yellow Green
-  '#DB7093', // Darker Neon Fuchsia
-  '#00FF7F', // Darker Spring Green
-  '#FFD700', // Darker Electric Lime
-  '#FF007F', // Darker Bright Magenta
-  '#FF6347', // Darker Neon Vermilion
+  "#2E8B57", // Darker Neon Green
+  "#FF6EB4", // Darker Neon Pink
+  "#00CDCD", // Darker Cyan
+  "#FF00FF", // Darker Neon Magenta
+  "#FF007F", // Darker Bright Pink
+  "#FFD700", // Darker Neon Yellow
+  "#00CED1", // Darker Neon Mint Green
+  "#FF1493", // Darker Neon Red
+  "#00CED1", // Darker Bright Aqua
+  "#FF7F50", // Darker Neon Coral
+  "#9ACD32", // Darker Neon Lime
+  "#FFA500", // Darker Neon Orange
+  "#32CD32", // Darker Neon Chartreuse
+  "#ADFF2F", // Darker Neon Yellow Green
+  "#DB7093", // Darker Neon Fuchsia
+  "#00FF7F", // Darker Spring Green
+  "#FFD700", // Darker Electric Lime
+  "#FF007F", // Darker Bright Magenta
+  "#FF6347", // Darker Neon Vermilion
 ];
 
 export function getUserColor(userId: string) {
@@ -727,15 +664,15 @@ import {
   shift,
   size,
   useFloating,
-} from '@floating-ui/react-dom';
-import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
-import { OPEN_FLOATING_COMPOSER_COMMAND } from '@liveblocks/react-lexical';
-import type { LexicalEditor, LexicalNode } from 'lexical';
-import { $getSelection, $isRangeSelection, $isTextNode } from 'lexical';
-import Image from 'next/image';
-import { useEffect, useLayoutEffect, useState } from 'react';
-import * as React from 'react';
-import { createPortal } from 'react-dom';
+} from "@floating-ui/react-dom";
+import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
+import { OPEN_FLOATING_COMPOSER_COMMAND } from "@liveblocks/react-lexical";
+import type { LexicalEditor, LexicalNode } from "lexical";
+import { $getSelection, $isRangeSelection, $isTextNode } from "lexical";
+import Image from "next/image";
+import { useEffect, useLayoutEffect, useState } from "react";
+import * as React from "react";
+import { createPortal } from "react-dom";
 
 export default function FloatingToolbar() {
   const [editor] = useLexicalComposerContext();
@@ -746,7 +683,7 @@ export default function FloatingToolbar() {
     editor.registerUpdateListener(({ tags }) => {
       return editor.getEditorState().read(() => {
         // Ignore selection updates related to collaboration
-        if (tags.has('collaboration')) return;
+        if (tags.has("collaboration")) return;
 
         const selection = $getSelection();
         if (!$isRangeSelection(selection) || selection.isCollapsed()) {
@@ -761,7 +698,7 @@ export default function FloatingToolbar() {
           anchor.getNode(),
           anchor.offset,
           focus.getNode(),
-          focus.offset,
+          focus.offset
         );
 
         setRange(range);
@@ -795,8 +732,8 @@ function Toolbar({
     x,
     y,
   } = useFloating({
-    strategy: 'fixed',
-    placement: 'bottom',
+    strategy: "fixed",
+    placement: "bottom",
     middleware: [
       flip({ padding, crossAxis: false }),
       offset(10),
@@ -825,7 +762,7 @@ function Toolbar({
         top: 0,
         left: 0,
         transform: `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`,
-        minWidth: 'max-content',
+        minWidth: "max-content",
       }}
     >
       <div className="floating-toolbar">
@@ -833,7 +770,7 @@ function Toolbar({
           onClick={() => {
             const isOpen = editor.dispatchCommand(
               OPEN_FLOATING_COMPOSER_COMMAND,
-              undefined,
+              undefined
             );
             if (isOpen) {
               onRangeChange(null);
@@ -850,7 +787,7 @@ function Toolbar({
         </button>
       </div>
     </div>,
-    container,
+    container
   );
 }
 
@@ -895,7 +832,7 @@ function getDOMIndexWithinParent(node: ChildNode): [ParentNode, number] {
   const parent = node.parentNode;
 
   if (parent === null) {
-    throw new Error('Should never happen');
+    throw new Error("Should never happen");
   }
 
   return [parent, Array.from(parent.childNodes).indexOf(node)];
@@ -915,7 +852,7 @@ export function createDOMRange(
   anchorNode: LexicalNode,
   _anchorOffset: number,
   focusNode: LexicalNode,
-  _focusOffset: number,
+  _focusOffset: number
 ): Range | null {
   const anchorKey = anchorNode.getKey();
   const focusKey = focusNode.getKey();
@@ -942,11 +879,11 @@ export function createDOMRange(
     return null;
   }
 
-  if (anchorDOM.nodeName === 'BR') {
+  if (anchorDOM.nodeName === "BR") {
     [anchorDOM, anchorOffset] = getDOMIndexWithinParent(anchorDOM as ChildNode);
   }
 
-  if (focusDOM.nodeName === 'BR') {
+  if (focusDOM.nodeName === "BR") {
     [focusDOM, focusOffset] = getDOMIndexWithinParent(focusDOM as ChildNode);
   }
 
@@ -955,7 +892,7 @@ export function createDOMRange(
   if (
     anchorDOM === focusDOM &&
     firstChild !== null &&
-    firstChild.nodeName === 'BR' &&
+    firstChild.nodeName === "BR" &&
     anchorOffset === 0 &&
     focusOffset === 0
   ) {
@@ -1195,31 +1132,3 @@ export const Notifications = () => {
 ```
 
 </details>
-
-## <a name="links">🔗 Links</a>
-
-- Public assets used in the project can be found [here](https://drive.google.com/file/d/1MCQaP-imgDdopwcUn4CN_D-WglDc--Ho/view?usp=sharing)
-- [Liveblocks Starter Guide](https://liveblocks.io/docs/get-started/nextjs-lexical)
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js 14 Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://jsmastery.pro/next14" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/557837ce-f612-4530-ab24-189e75133c71" alt="Project Banner">
-</a>
-
-<br />
-<br />
-
-**Accelerate your professional journey with the Expert Training program**
-
-And if you're hungry for more than just a course and want to understand how we learn and tackle tech challenges, hop into our personalized masterclass. We cover best practices, different web skills, and offer mentorship to boost your confidence. Let's learn and grow together!
-
-<a href="https://www.jsmastery.pro/masterclass" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/fed352ad-f27b-400d-9b8f-c7fe628acb84" alt="Project Banner">
-</a>
-
-#
