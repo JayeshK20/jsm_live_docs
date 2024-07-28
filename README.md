@@ -20,12 +20,6 @@
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
-
-## 🚨 Tutorial
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -62,8 +56,6 @@ Built with Next.js to handle the user interface, Liveblocks for real-time featur
 👉 **Responsive**: The application is responsive across all devices.
 
 and many more, including code architecture and reusability
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
 ## <a name="snippets">🕸️ Snippets</a>
 
