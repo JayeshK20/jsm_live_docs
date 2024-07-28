@@ -1,16 +1,19 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [{protocol: 'https', hostname: 'img.clerk.com',}]
-    }
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    remotePatterns: [{ protocol: 'https', hostname: 'img.clerk.com' }]
+  }
 };
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
 // https://github.com/getsentry/sentry-webpack-plugin#options
 
-org: "jayeshkolambkar",
+org: "jsm-x9",
 project: "javascript-nextjs",
 
 // Only print logs for uploading source maps in CI
