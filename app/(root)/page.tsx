@@ -1,5 +1,6 @@
 import AddDocumentBtn from '@/components/AddDocumentBtn';
 import { DeleteModal } from '@/components/DeleteModal';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from '@/components/Header'
 import Notifications from '@/components/Notifications';
 import { Button } from '@/components/ui/button'
